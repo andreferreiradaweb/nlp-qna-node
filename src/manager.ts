@@ -17,7 +17,7 @@ manager.addAnswer('pt', 'greetings.hello', 'Oi, como posso ajudar?');
 
 manager.train()
 
-export async function processarPergunta(pergunta: string): Promise<string> {
+export async function processQuestion(pergunta: string): Promise<string> {
   const response = await manager.process('pt', pergunta);
   return response.answer || 'Desculpe, não tenho uma resposta para isso.';
 }
